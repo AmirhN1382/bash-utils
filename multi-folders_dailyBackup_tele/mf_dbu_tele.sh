@@ -19,7 +19,7 @@ function telegram_send_document() {
 
 function backup_sources() {
     # Send current date to Telegram
-    cd ..
+    #cd ..
     telegram_send_message $CHAT_ID "Source Backup - $DATE:"
     backup_file="./$DATE.sources.zip"
     zip -r $backup_file folder1 folder2 folder3 -x "**/node_modules/*"
